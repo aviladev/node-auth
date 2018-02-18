@@ -1,8 +1,8 @@
 const router = require('express').Router()
 
-router.route('/')
-  .get((req, res) => {
-    res.send('Root')
-  })
+const { signup } = require('./controllers/authentication')
+
+router.route('/signup')
+  .post(signup)
 
 module.exports = router
