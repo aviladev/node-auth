@@ -5,7 +5,14 @@ const mongoose = require('mongoose')
 
 const router = require('./router')
 
-mongoose.connect('mongodb://localhost:27017/auth')
+mongoose
+  .connect('mongodb://localhost:27017/auth')
+  .catch((e) => {
+    console.error('Could not connect to database')
+    console.error(e)
+    console.error('Exiting process')
+    process.exit(1)
+  })
 
 const PORT = process.env.PORT || 8080
 
