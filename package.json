@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/avilapedro/node-auth#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.16.2",
     "mongoose": "^5.0.6",
     "morgan": "^1.9.0"
