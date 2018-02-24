@@ -44,6 +44,10 @@ const signup = async (req, res, next) => {
   }
 }
 
+const signin = async ({user}, res, next) =>
+  res.send({ token: createToken(user) })
+
 module.exports = {
-  signup
+  signup,
+  signin
 }
