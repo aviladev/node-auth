@@ -8,7 +8,9 @@ const requireAuth = passport.authenticate('jwt', { session: false })
 const requireSignin = passport.authenticate('local', { session: false })
 
 router.route('/')
-  .get(requireAuth, (req, res) => res.send({ hi: 'there' }))
+  .get(requireAuth, (req, res) =>
+    res.send({ message: 'Node Auth API' })
+  )
 
 router.route('/signup')
   .post(signup)
